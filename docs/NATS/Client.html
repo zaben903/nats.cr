@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.15.1">
+<meta name="crystal_docs.project_version" content="main-dev">
+<meta name="crystal_docs.project_name" content="nats">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="nats">
+  <title>NATS::Client - nats main-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          nats
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="nats/NATS" data-name="nats">
+      <a href="../NATS.html">NATS</a>
+      
+        <ul>
+  
+  <li class=" " data-id="nats/NATS/AuthenticationError" data-name="nats::authenticationerror">
+      <a href="../NATS/AuthenticationError.html">AuthenticationError</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="nats/NATS/Client" data-name="nats::client">
+      <a href="../NATS/Client.html">Client</a>
+      
+        <ul>
+  
+  <li class=" " data-id="nats/NATS/Client/Status" data-name="nats::client::status">
+      <a href="../NATS/Client/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/ClientClosedError" data-name="nats::clientclosederror">
+      <a href="../NATS/ClientClosedError.html">ClientClosedError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/ERRError" data-name="nats::errerror">
+      <a href="../NATS/ERRError.html">ERRError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Error" data-name="nats::error">
+      <a href="../NATS/Error.html">Error</a>
+      
+    </li>
+  
+  <li class="parent " data-id="nats/NATS/Message" data-name="nats::message">
+      <a href="../NATS/Message.html">Message</a>
+      
+        <ul>
+  
+  <li class=" " data-id="nats/NATS/Message/CONNECT" data-name="nats::message::connect">
+      <a href="../NATS/Message/CONNECT.html">CONNECT</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/INFO" data-name="nats::message::info">
+      <a href="../NATS/Message/INFO.html">INFO</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/MSG" data-name="nats::message::msg">
+      <a href="../NATS/Message/MSG.html">MSG</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/PUB" data-name="nats::message::pub">
+      <a href="../NATS/Message/PUB.html">PUB</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/SUB" data-name="nats::message::sub">
+      <a href="../NATS/Message/SUB.html">SUB</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/UNSUB" data-name="nats::message::unsub">
+      <a href="../NATS/Message/UNSUB.html">UNSUB</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/MSGError" data-name="nats::msgerror">
+      <a href="../NATS/MSGError.html">MSGError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/NUID" data-name="nats::nuid">
+      <a href="../NATS/NUID.html">NUID</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Options" data-name="nats::options">
+      <a href="../NATS/Options.html">Options</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Subscription" data-name="nats::subscription">
+      <a href="../NATS/Subscription.html">Subscription</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/TimeoutError" data-name="nats::timeouterror">
+      <a href="../NATS/TimeoutError.html">TimeoutError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    class
+  </span> NATS::<wbr>Client
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../NATS/Client.html">NATS::Client</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>NATS Client for connecting to a NATS server.<br />
+This client allows you to subscribe and publish messages.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;nats/client&quot;</span>
+
+client <span class="o">=</span> <span class="t">NATS</span><span class="t">::</span><span class="t">Client</span>.new(<span class="s">&quot;nats://localhost:4222&quot;</span>)
+client.connect
+
+client.subscribe(<span class="s">&quot;foo&quot;</span>) <span class="k">do</span> <span class="o">|</span>msg<span class="o">|</span>
+  puts <span class="s">&quot;Received message on subject </span><span class="i">#{</span>msg.subject<span class="i">}</span><span class="s">: </span><span class="i">#{</span>msg.payload<span class="i">}</span><span class="s">&quot;</span>
+<span class="k">end</span>
+
+client.publish(<span class="s">&quot;foo&quot;</span>, <span class="s">&quot;Hello, NATS!&quot;</span>)
+
+client.subscribe(<span class="s">&quot;bar&quot;</span>) <span class="k">do</span> <span class="o">|</span>msg<span class="o">|</span>
+  msg.reply <span class="s">&quot;Received your message on bar: </span><span class="i">#{</span>msg.payload<span class="i">}</span><span class="s">&quot;</span>
+<span class="k">end</span>
+
+response <span class="o">=</span> client.request(<span class="s">&quot;bar&quot;</span>, <span class="s">&quot;Hello, bar!&quot;</span>)
+puts <span class="s">&quot;Received response: </span><span class="i">#{</span>response.payload<span class="i">}</span><span class="s">&quot;</span>
+
+client.request(<span class="s">&quot;bar&quot;</span>) <span class="k">do</span> <span class="o">|</span>msg<span class="o">|</span>
+  puts <span class="s">&quot;Recieved async response: </span><span class="i">#{</span>msg.payload<span class="i">}</span><span class="s">&quot;</span>
+<span class="k">end</span>
+
+client.close</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      nats/client.cr
+    
+    <br/>
+  
+    
+      nats/client/status.cr
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="BUFFER_SIZE">
+        <strong>BUFFER_SIZE</strong> = <code><span class="n">32768</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Buffer Size for the socket</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DEFAULT_HOST">
+        <strong>DEFAULT_HOST</strong> = <code><span class="s">&quot;localhost&quot;</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Default Host for NATS Server</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DEFAULT_PORT">
+        <strong>DEFAULT_PORT</strong> = <code><span class="n">4222</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Default Port for NATS Server</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DEFAULT_URI">
+        <strong>DEFAULT_URI</strong> = <code><span class="t">URI</span>.parse(<span class="s">&quot;nats://</span><span class="i">#{</span><span class="t">DEFAULT_HOST</span><span class="i">}</span><span class="s">:</span><span class="i">#{</span><span class="t">DEFAULT_PORT</span><span class="i">}</span><span class="s">&quot;</span>)</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Default URI for NATS Server</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+  
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28uri%3AString%7CURI%3DDEFAULT_URI%2Coptions%3AOptions%3DOptions.new%2Cuser%3AString%7CNil%3Dnil%2Cpass%3AString%7CNil%3Dnil%2Cjwt%3AString%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(uri : String | URI = <span class="t">DEFAULT_URI</span>, options : Options = <span class="t">Options</span>.new, user : String | Nil = <span class="n">nil</span>, pass : String | Nil = <span class="n">nil</span>, jwt : String | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#close-instance-method" class="signature"><strong>#close</strong></a>
+        
+          <div class="summary"><p>Closes the NATS connection and cleans up resources.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#connect%3Aself-instance-method" class="signature"><strong>#connect</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Connects to the NATS server</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#connected%3F%3ABool-instance-method" class="signature"><strong>#connected?</strong> : Bool</a>
+        
+          <div class="summary"><p>Checks if the client is connected to the NATS server.\ Will send a PING message and wait for a PONG response.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#publish%28subject%3AString%2Cpayload%3AString%29-instance-method" class="signature"><strong>#publish</strong>(subject : String, payload : String)</a>
+        
+          <div class="summary"><p>Publishes a message to the specified subject.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#request%28subject%3AString%2Cpayload%3AString%2Ctimeout%3ATime%3A%3ASpan%7CNil%3Dnil%29%3AMessage%3A%3AMSG-instance-method" class="signature"><strong>#request</strong>(subject : String, payload : String, timeout : Time::Span | Nil = <span class="n">nil</span>) : Message::MSG</a>
+        
+          <div class="summary"><p>Publishes a message to the specified subject and waits for a response.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#request%28subject%3AString%2Cpayload%3AString%2C%26callback%3AMessage%3A%3AMSG-%3ENil%29-instance-method" class="signature"><strong>#request</strong>(subject : String, payload : String, &callback : Message::MSG -> Nil)</a>
+        
+          <div class="summary"><p>Publishes a message to the specified subject and sends response to callback when available.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#status%3AStatus-instance-method" class="signature"><strong>#status</strong> : Status</a>
+        
+          <div class="summary"><p>The current status of the client connection.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subscribe%28subject%3AString%2Cqueue_group%3AString%7CNil%3Dnil%2C%26callback%3AMessage%3A%3AMSG-%3ENil%29%3ASubscription-instance-method" class="signature"><strong>#subscribe</strong>(subject : String, queue_group : String | Nil = <span class="n">nil</span>, &callback : Message::MSG -> Nil) : Subscription</a>
+        
+          <div class="summary"><p>Subscribe to a subject, messages will be delivered to the provided callback.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unsubscribe%28sub%3ASubscription%29-instance-method" class="signature"><strong>#unsubscribe</strong>(sub : Subscription)</a>
+        
+          <div class="summary"><p>Unsubscribes from a subject.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(uri:String|URI=DEFAULT_URI,options:Options=Options.new,user:String|Nil=nil,pass:String|Nil=nil,jwt:String|Nil=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(uri : String | URI = <span class="t">DEFAULT_URI</span>, options : <a href="../NATS/Options.html">Options</a> = <span class="t">Options</span>.new, user : String | Nil = <span class="n">nil</span>, pass : String | Nil = <span class="n">nil</span>, jwt : String | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28uri%3AString%7CURI%3DDEFAULT_URI%2Coptions%3AOptions%3DOptions.new%2Cuser%3AString%7CNil%3Dnil%2Cpass%3AString%7CNil%3Dnil%2Cjwt%3AString%7CNil%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="close-instance-method">
+      <div class="signature">
+        
+        def <strong>close</strong>
+
+        <a class="method-permalink" href="#close-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Closes the NATS connection and cleans up resources.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="connect:self-instance-method">
+      <div class="signature">
+        
+        def <strong>connect</strong> : <span class="k">self</span>
+
+        <a class="method-permalink" href="#connect%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Connects to the NATS server</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="connected?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>connected?</strong> : Bool
+
+        <a class="method-permalink" href="#connected%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Checks if the client is connected to the NATS server.<br />
+Will send a PING message and wait for a PONG response.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="publish(subject:String,payload:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>publish</strong>(subject : String, payload : String)
+
+        <a class="method-permalink" href="#publish%28subject%3AString%2Cpayload%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Publishes a message to the specified subject.</p>
+<p><em>subject</em>: The subject to publish to.<br />
+<em>payload</em>: The message payload.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="request(subject:String,payload:String,timeout:Time::Span|Nil=nil):Message::MSG-instance-method">
+      <div class="signature">
+        
+        def <strong>request</strong>(subject : String, payload : String, timeout : Time::Span | Nil = <span class="n">nil</span>) : <a href="../NATS/Message/MSG.html">Message::MSG</a>
+
+        <a class="method-permalink" href="#request%28subject%3AString%2Cpayload%3AString%2Ctimeout%3ATime%3A%3ASpan%7CNil%3Dnil%29%3AMessage%3A%3AMSG-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Publishes a message to the specified subject and waits for a response.</p>
+<p><em>subject</em>: The subject to publish to.<br />
+<em>payload</em>: The message payload.<br />
+<em>timeout</em>: Optional timeout for waiting for a response. Will use <code><a href="../NATS/Options.html#timeout%3ATime%3A%3ASpan-instance-method">Options.timeout</a></code> if not set.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="request(subject:String,payload:String,&amp;callback:Message::MSG-&gt;Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>request</strong>(subject : String, payload : String, &callback : <a href="../NATS/Message/MSG.html">Message::MSG</a> -> Nil)
+
+        <a class="method-permalink" href="#request%28subject%3AString%2Cpayload%3AString%2C%26callback%3AMessage%3A%3AMSG-%3ENil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Publishes a message to the specified subject and sends response to callback when available.</p>
+<p><em>subject</em>: The subject to publish to.<br />
+<em>payload</em>: The message payload.<br />
+<em>callback</em>: Callback to handle the response message.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="status:Status-instance-method">
+      <div class="signature">
+        
+        def <strong>status</strong> : <a href="../NATS/Client/Status.html">Status</a>
+
+        <a class="method-permalink" href="#status%3AStatus-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The current status of the client connection.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="subscribe(subject:String,queue_group:String|Nil=nil,&amp;callback:Message::MSG-&gt;Nil):Subscription-instance-method">
+      <div class="signature">
+        
+        def <strong>subscribe</strong>(subject : String, queue_group : String | Nil = <span class="n">nil</span>, &callback : <a href="../NATS/Message/MSG.html">Message::MSG</a> -> Nil) : <a href="../NATS/Subscription.html">Subscription</a>
+
+        <a class="method-permalink" href="#subscribe%28subject%3AString%2Cqueue_group%3AString%7CNil%3Dnil%2C%26callback%3AMessage%3A%3AMSG-%3ENil%29%3ASubscription-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Subscribe to a subject, messages will be delivered to the provided callback.</p>
+<p><em>subject</em>: The subject to subscribe to.<br />
+<em>queue_group</em>: Optional queue group for load balancing.<br />
+<em>callback</em>: The callback to handle incoming messages.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unsubscribe(sub:Subscription)-instance-method">
+      <div class="signature">
+        
+        def <strong>unsubscribe</strong>(sub : <a href="../NATS/Subscription.html">Subscription</a>)
+
+        <a class="method-permalink" href="#unsubscribe%28sub%3ASubscription%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Unsubscribes from a subject.</p>
+<p><em>sub</em>: The subscription to unsubscribe from.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

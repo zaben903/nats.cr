@@ -12,27 +12,29 @@
 # limitations under the License.
 #
 
-require "./spec_helper"
-require "./nats/*"
+module NATS
+  class Client
+    enum Status
+      # When the client is not actively connected.
+      DISCONNECTED
 
-describe NATS do
-  uri = URI.parse("nats://127.0.0.1:4322")
-  server : NATSServer | Nil = nil
+      # When the client is connected.
+      CONNECTED
 
-  Spec.before_each do
-    server = NATSServer.start(uri)
-  end
+      # When the client will no longer attempt to connect to a NATS Server.
+      CLOSED
 
-  Spec.after_each do
-    server.try(&.shutdown)
-    server = nil
-  end
+      # When the client has disconnected and is attempting to reconnect.
+      RECONNECTING
 
-  describe "#connect" do
-    it "returns a NATS::Client" do
-      client = NATS.connect(uri)
-      client.should be_a(NATS::Client)
-      client.close
+      # When the client is attempting to connect to a NATS Server for the first time.
+      CONNECTING
+
+      # When the client is draining a connection before closing.
+      DRAINING_SUBS
+
+      # :ditto:
+      DRAINING_PUBS
     end
   end
 end

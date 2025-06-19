@@ -1,20 +1,34 @@
+# Copyright 2019-2025 The NATS Authors
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
 require "spec"
 require "socket"
 require "../src/nats"
-require "../src/nats/connection"
+require "../src/nats/client"
 
 class NATSServer
   getter? was_running
 
-  def self.start(uri = NATS::CONNECTION::DEFAULT_URI)
+  def self.start(uri = NATS::Client::DEFAULT_URI)
     server = NATSServer.new(uri)
     server.start(true)
     return server
   end
 
-  getter uri
+  getter uri : URI
 
-  def initialize(uri = NATS::CONNECTION::DEFAULT_URI, flags : String? = nil, config_file : String? = nil)
+  def initialize(uri = NATS::Client::DEFAULT_URI, flags : String? = nil, config_file : String? = nil)
     @uri = uri.is_a?(URI) ? uri : URI.parse(uri)
     @flags = flags
     @config_file = config_file
@@ -31,9 +45,14 @@ class NATSServer
     end
     args += " #{@flags}".split if @flags
 
-    args << "-DV" if ENV["DEBUG_NATS_TEST"]? == "true"
+    if ENV["DEBUG_NATS_TEST"]? == "true"
+      args << "-DV"
+      kwargs = {output: STDOUT, error: STDERR}
+    else
+      kwargs = {output: Process::Redirect::Close, error: Process::Redirect::Close}
+    end
 
-    @p = Process.new("nats-server", args)
+    @p = Process.new("nats-server", args, **kwargs)
     raise "Server could not start, already running?" if @p.nil? || @p.try(&.terminated?)
     wait_for_server(@uri, 10) if wait_for_server
   end

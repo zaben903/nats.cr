@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.15.1">
+<meta name="crystal_docs.project_version" content="main-dev">
+<meta name="crystal_docs.project_name" content="nats">
+
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+  <meta name="repository-name" content="nats">
+  <title>NATS::Client::Status - nats main-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          nats
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="nats/NATS" data-name="nats">
+      <a href="../../NATS.html">NATS</a>
+      
+        <ul>
+  
+  <li class=" " data-id="nats/NATS/AuthenticationError" data-name="nats::authenticationerror">
+      <a href="../../NATS/AuthenticationError.html">AuthenticationError</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="nats/NATS/Client" data-name="nats::client">
+      <a href="../../NATS/Client.html">Client</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="nats/NATS/Client/Status" data-name="nats::client::status">
+      <a href="../../NATS/Client/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/ClientClosedError" data-name="nats::clientclosederror">
+      <a href="../../NATS/ClientClosedError.html">ClientClosedError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/ERRError" data-name="nats::errerror">
+      <a href="../../NATS/ERRError.html">ERRError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Error" data-name="nats::error">
+      <a href="../../NATS/Error.html">Error</a>
+      
+    </li>
+  
+  <li class="parent " data-id="nats/NATS/Message" data-name="nats::message">
+      <a href="../../NATS/Message.html">Message</a>
+      
+        <ul>
+  
+  <li class=" " data-id="nats/NATS/Message/CONNECT" data-name="nats::message::connect">
+      <a href="../../NATS/Message/CONNECT.html">CONNECT</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/INFO" data-name="nats::message::info">
+      <a href="../../NATS/Message/INFO.html">INFO</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/MSG" data-name="nats::message::msg">
+      <a href="../../NATS/Message/MSG.html">MSG</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/PUB" data-name="nats::message::pub">
+      <a href="../../NATS/Message/PUB.html">PUB</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/SUB" data-name="nats::message::sub">
+      <a href="../../NATS/Message/SUB.html">SUB</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/UNSUB" data-name="nats::message::unsub">
+      <a href="../../NATS/Message/UNSUB.html">UNSUB</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/MSGError" data-name="nats::msgerror">
+      <a href="../../NATS/MSGError.html">MSGError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/NUID" data-name="nats::nuid">
+      <a href="../../NATS/NUID.html">NUID</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Options" data-name="nats::options">
+      <a href="../../NATS/Options.html">Options</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Subscription" data-name="nats::subscription">
+      <a href="../../NATS/Subscription.html">Subscription</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/TimeoutError" data-name="nats::timeouterror">
+      <a href="../../NATS/TimeoutError.html">TimeoutError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    enum
+  </span> NATS::<wbr>Client::<wbr>Status
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      nats/client/status.cr
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="DISCONNECTED">
+        <strong>DISCONNECTED</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>When the client is not actively connected.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="CONNECTED">
+        <strong>CONNECTED</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>When the client is connected.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="CLOSED">
+        <strong>CLOSED</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>When the client will no longer attempt to connect to a NATS Server.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="RECONNECTING">
+        <strong>RECONNECTING</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>When the client has disconnected and is attempting to reconnect.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="CONNECTING">
+        <strong>CONNECTING</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>When the client is attempting to connect to a NATS Server for the first time.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DRAINING_SUBS">
+        <strong>DRAINING_SUBS</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>When the client is draining a connection before closing.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DRAINING_PUBS">
+        <strong>DRAINING_PUBS</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>When the client is draining a connection before closing.</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#closed%3F-instance-method" class="signature"><strong>#closed?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#CLOSED">CLOSED</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#connected%3F-instance-method" class="signature"><strong>#connected?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#CONNECTED">CONNECTED</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#connecting%3F-instance-method" class="signature"><strong>#connecting?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#CONNECTING">CONNECTING</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#disconnected%3F-instance-method" class="signature"><strong>#disconnected?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#DISCONNECTED">DISCONNECTED</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#draining_pubs%3F-instance-method" class="signature"><strong>#draining_pubs?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#DRAINING_PUBS">DRAINING_PUBS</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#draining_subs%3F-instance-method" class="signature"><strong>#draining_subs?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#DRAINING_SUBS">DRAINING_SUBS</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reconnecting%3F-instance-method" class="signature"><strong>#reconnecting?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#RECONNECTING">RECONNECTING</a></code></p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="closed?-instance-method">
+      <div class="signature">
+        
+        def <strong>closed?</strong>
+
+        <a class="method-permalink" href="#closed%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#CLOSED">CLOSED</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="connected?-instance-method">
+      <div class="signature">
+        
+        def <strong>connected?</strong>
+
+        <a class="method-permalink" href="#connected%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#CONNECTED">CONNECTED</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="connecting?-instance-method">
+      <div class="signature">
+        
+        def <strong>connecting?</strong>
+
+        <a class="method-permalink" href="#connecting%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#CONNECTING">CONNECTING</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="disconnected?-instance-method">
+      <div class="signature">
+        
+        def <strong>disconnected?</strong>
+
+        <a class="method-permalink" href="#disconnected%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#DISCONNECTED">DISCONNECTED</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="draining_pubs?-instance-method">
+      <div class="signature">
+        
+        def <strong>draining_pubs?</strong>
+
+        <a class="method-permalink" href="#draining_pubs%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#DRAINING_PUBS">DRAINING_PUBS</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="draining_subs?-instance-method">
+      <div class="signature">
+        
+        def <strong>draining_subs?</strong>
+
+        <a class="method-permalink" href="#draining_subs%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#DRAINING_SUBS">DRAINING_SUBS</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reconnecting?-instance-method">
+      <div class="signature">
+        
+        def <strong>reconnecting?</strong>
+
+        <a class="method-permalink" href="#reconnecting%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../NATS/Client/Status.html#RECONNECTING">RECONNECTING</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

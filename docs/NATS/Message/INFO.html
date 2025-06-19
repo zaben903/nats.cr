@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.15.1">
+<meta name="crystal_docs.project_version" content="main-dev">
+<meta name="crystal_docs.project_name" content="nats">
+
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+  <meta name="repository-name" content="nats">
+  <title>NATS::Message::INFO - nats main-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          nats
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="nats/NATS" data-name="nats">
+      <a href="../../NATS.html">NATS</a>
+      
+        <ul>
+  
+  <li class=" " data-id="nats/NATS/AuthenticationError" data-name="nats::authenticationerror">
+      <a href="../../NATS/AuthenticationError.html">AuthenticationError</a>
+      
+    </li>
+  
+  <li class="parent " data-id="nats/NATS/Client" data-name="nats::client">
+      <a href="../../NATS/Client.html">Client</a>
+      
+        <ul>
+  
+  <li class=" " data-id="nats/NATS/Client/Status" data-name="nats::client::status">
+      <a href="../../NATS/Client/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/ClientClosedError" data-name="nats::clientclosederror">
+      <a href="../../NATS/ClientClosedError.html">ClientClosedError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/ERRError" data-name="nats::errerror">
+      <a href="../../NATS/ERRError.html">ERRError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Error" data-name="nats::error">
+      <a href="../../NATS/Error.html">Error</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="nats/NATS/Message" data-name="nats::message">
+      <a href="../../NATS/Message.html">Message</a>
+      
+        <ul>
+  
+  <li class=" " data-id="nats/NATS/Message/CONNECT" data-name="nats::message::connect">
+      <a href="../../NATS/Message/CONNECT.html">CONNECT</a>
+      
+    </li>
+  
+  <li class=" current" data-id="nats/NATS/Message/INFO" data-name="nats::message::info">
+      <a href="../../NATS/Message/INFO.html">INFO</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/MSG" data-name="nats::message::msg">
+      <a href="../../NATS/Message/MSG.html">MSG</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/PUB" data-name="nats::message::pub">
+      <a href="../../NATS/Message/PUB.html">PUB</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/SUB" data-name="nats::message::sub">
+      <a href="../../NATS/Message/SUB.html">SUB</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/UNSUB" data-name="nats::message::unsub">
+      <a href="../../NATS/Message/UNSUB.html">UNSUB</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/MSGError" data-name="nats::msgerror">
+      <a href="../../NATS/MSGError.html">MSGError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/NUID" data-name="nats::nuid">
+      <a href="../../NATS/NUID.html">NUID</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Options" data-name="nats::options">
+      <a href="../../NATS/Options.html">Options</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Subscription" data-name="nats::subscription">
+      <a href="../../NATS/Subscription.html">Subscription</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/TimeoutError" data-name="nats::timeouterror">
+      <a href="../../NATS/TimeoutError.html">TimeoutError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    struct
+  </span> NATS::<wbr>Message::<wbr>INFO
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../NATS/Message/INFO.html">NATS::Message::INFO</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>A client will need to start as a plain TCP connection,
+then when the server accepts a connection from the client,
+it will send information about itself,
+the configuration and security requirements necessary for the client to successfully authenticate with the server and exchange messages.</p>
+<p>When using the updated client protocol (see <code><a href="../../NATS/Message/CONNECT.html">CONNECT</a></code>),
+INFO messages can be sent anytime by the server.
+This means clients with that protocol level need to be able to asynchronously handle INFO messages.</p>
+<p>SEE: https://docs.nats.io/reference/reference-protocols/nats-protocol#info</p>
+
+
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type">JSON::Serializable</li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      nats/message/info.cr
+    
+    <br/>
+  
+
+
+
+
+
+  
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28pull%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
+        
+      </li>
+    
+  </ul>
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#auth_required%3ABool%7CNil-instance-method" class="signature"><strong>#auth_required</strong> : Bool | Nil</a>
+        
+          <div class="summary"><p>If this is true, then the client should try to authenticate upon connect.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#auth_required%3D%28auth_required%3ABool%7CNil%29-instance-method" class="signature"><strong>#auth_required=</strong>(auth_required : Bool | Nil)</a>
+        
+          <div class="summary"><p>If this is true, then the client should try to authenticate upon connect.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#client_id%3AUInt64%7CNil-instance-method" class="signature"><strong>#client_id</strong> : UInt64 | Nil</a>
+        
+          <div class="summary"><p>The internal client identifier in the server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#client_id%3D%28client_id%3AUInt64%7CNil%29-instance-method" class="signature"><strong>#client_id=</strong>(client_id : UInt64 | Nil)</a>
+        
+          <div class="summary"><p>The internal client identifier in the server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#client_ip%3AString%7CNil-instance-method" class="signature"><strong>#client_ip</strong> : String | Nil</a>
+        
+          <div class="summary"><p>The IP of the client.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#client_ip%3D%28client_ip%3AString%7CNil%29-instance-method" class="signature"><strong>#client_ip=</strong>(client_ip : String | Nil)</a>
+        
+          <div class="summary"><p>The IP of the client.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cluster%3AString%7CNil-instance-method" class="signature"><strong>#cluster</strong> : String | Nil</a>
+        
+          <div class="summary"><p>The name of the cluster.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cluster%3D%28cluster%3AString%7CNil%29-instance-method" class="signature"><strong>#cluster=</strong>(cluster : String | Nil)</a>
+        
+          <div class="summary"><p>The name of the cluster.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#connect_urls%3AArray%28String%29%7CNil-instance-method" class="signature"><strong>#connect_urls</strong> : Array(String) | Nil</a>
+        
+          <div class="summary"><p>List of server urls that a client can connect to.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#connect_urls%3D%28connect_urls%3AArray%28String%29%7CNil%29-instance-method" class="signature"><strong>#connect_urls=</strong>(connect_urls : Array(String) | Nil)</a>
+        
+          <div class="summary"><p>List of server urls that a client can connect to.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#domain%3AString%7CNil-instance-method" class="signature"><strong>#domain</strong> : String | Nil</a>
+        
+          <div class="summary"><p>The configured NATS domain of the server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#domain%3D%28domain%3AString%7CNil%29-instance-method" class="signature"><strong>#domain=</strong>(domain : String | Nil)</a>
+        
+          <div class="summary"><p>The configured NATS domain of the server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#git_commit%3AString%7CNil-instance-method" class="signature"><strong>#git_commit</strong> : String | Nil</a>
+        
+          <div class="summary"><p>The git hash at which the NATS server was built.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#git_commit%3D%28git_commit%3AString%7CNil%29-instance-method" class="signature"><strong>#git_commit=</strong>(git_commit : String | Nil)</a>
+        
+          <div class="summary"><p>The git hash at which the NATS server was built.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#go%3AString-instance-method" class="signature"><strong>#go</strong> : String</a>
+        
+          <div class="summary"><p>The version of golang the NATS server was built with.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#go%3D%28go%3AString%29-instance-method" class="signature"><strong>#go=</strong>(go : String)</a>
+        
+          <div class="summary"><p>The version of golang the NATS server was built with.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#headers%3ABool-instance-method" class="signature"><strong>#headers</strong> : Bool</a>
+        
+          <div class="summary"><p>Whether the server supports headers.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#headers%3D%28headers%3ABool%29-instance-method" class="signature"><strong>#headers=</strong>(headers : Bool)</a>
+        
+          <div class="summary"><p>Whether the server supports headers.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#host%3AString-instance-method" class="signature"><strong>#host</strong> : String</a>
+        
+          <div class="summary"><p>The IP address used to start the NATS server, by default this will be 0.0.0.0 and can be configured with -client_advertise host:port.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#host%3D%28host%3AString%29-instance-method" class="signature"><strong>#host=</strong>(host : String)</a>
+        
+          <div class="summary"><p>The IP address used to start the NATS server, by default this will be 0.0.0.0 and can be configured with -client_advertise host:port.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ip%3AString%7CNil-instance-method" class="signature"><strong>#ip</strong> : String | Nil</a>
+        
+          <div class="summary"><p>The IP of the server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ip%3D%28ip%3AString%7CNil%29-instance-method" class="signature"><strong>#ip=</strong>(ip : String | Nil)</a>
+        
+          <div class="summary"><p>The IP of the server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#jetstream%3ABool%7CNil-instance-method" class="signature"><strong>#jetstream</strong> : Bool | Nil</a>
+        
+          <div class="summary"><p>Whether the server supports JetStream.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#jetstream%3D%28jetstream%3ABool%7CNil%29-instance-method" class="signature"><strong>#jetstream=</strong>(jetstream : Bool | Nil)</a>
+        
+          <div class="summary"><p>Whether the server supports JetStream.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ldm%3ABool%7CNil-instance-method" class="signature"><strong>#ldm</strong> : Bool | Nil</a>
+        
+          <div class="summary"><p>If the server supports Lame Duck Mode notifications, and the current server has transitioned to lame duck, ldm will be set to true.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ldm%3D%28ldm%3ABool%7CNil%29-instance-method" class="signature"><strong>#ldm=</strong>(ldm : Bool | Nil)</a>
+        
+          <div class="summary"><p>If the server supports Lame Duck Mode notifications, and the current server has transitioned to lame duck, ldm will be set to true.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_payload%3AInt32-instance-method" class="signature"><strong>#max_payload</strong> : Int32</a>
+        
+          <div class="summary"><p>Maximum payload size, in bytes, that the server will accept from the client.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_payload%3D%28max_payload%3AInt32%29-instance-method" class="signature"><strong>#max_payload=</strong>(max_payload : Int32)</a>
+        
+          <div class="summary"><p>Maximum payload size, in bytes, that the server will accept from the client.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nonce%3AString%7CNil-instance-method" class="signature"><strong>#nonce</strong> : String | Nil</a>
+        
+          <div class="summary"><p>The nonce for use in CONNECT.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nonce%3D%28nonce%3AString%7CNil%29-instance-method" class="signature"><strong>#nonce=</strong>(nonce : String | Nil)</a>
+        
+          <div class="summary"><p>The nonce for use in CONNECT.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#port%3AInt32-instance-method" class="signature"><strong>#port</strong> : Int32</a>
+        
+          <div class="summary"><p>The port number the NATS server is configured to listen on.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#port%3D%28port%3AInt32%29-instance-method" class="signature"><strong>#port=</strong>(port : Int32)</a>
+        
+          <div class="summary"><p>The port number the NATS server is configured to listen on.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#proto%3AInt32-instance-method" class="signature"><strong>#proto</strong> : Int32</a>
+        
+          <div class="summary"><p>An integer indicating the protocol version of the server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#proto%3D%28proto%3AInt32%29-instance-method" class="signature"><strong>#proto=</strong>(proto : Int32)</a>
+        
+          <div class="summary"><p>An integer indicating the protocol version of the server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#server_id%3AString-instance-method" class="signature"><strong>#server_id</strong> : String</a>
+        
+          <div class="summary"><p>The unique identifier of the NATS server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#server_id%3D%28server_id%3AString%29-instance-method" class="signature"><strong>#server_id=</strong>(server_id : String)</a>
+        
+          <div class="summary"><p>The unique identifier of the NATS server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#server_name%3AString-instance-method" class="signature"><strong>#server_name</strong> : String</a>
+        
+          <div class="summary"><p>The name of the NATS server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#server_name%3D%28server_name%3AString%29-instance-method" class="signature"><strong>#server_name=</strong>(server_name : String)</a>
+        
+          <div class="summary"><p>The name of the NATS server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tls_available%3ABool%7CNil-instance-method" class="signature"><strong>#tls_available</strong> : Bool | Nil</a>
+        
+          <div class="summary"><p>If this is true, the client can provide a valid certificate during the TLS handshake.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tls_available%3D%28tls_available%3ABool%7CNil%29-instance-method" class="signature"><strong>#tls_available=</strong>(tls_available : Bool | Nil)</a>
+        
+          <div class="summary"><p>If this is true, the client can provide a valid certificate during the TLS handshake.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tls_required%3ABool%7CNil-instance-method" class="signature"><strong>#tls_required</strong> : Bool | Nil</a>
+        
+          <div class="summary"><p>If this is true, then the client must perform the TLS/1.2 handshake.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tls_required%3D%28tls_required%3ABool%7CNil%29-instance-method" class="signature"><strong>#tls_required=</strong>(tls_required : Bool | Nil)</a>
+        
+          <div class="summary"><p>If this is true, then the client must perform the TLS/1.2 handshake.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tls_verify%3ABool%7CNil-instance-method" class="signature"><strong>#tls_verify</strong> : Bool | Nil</a>
+        
+          <div class="summary"><p>If this is true, the client must provide a valid certificate during the TLS handshake.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tls_verify%3D%28tls_verify%3ABool%7CNil%29-instance-method" class="signature"><strong>#tls_verify=</strong>(tls_verify : Bool | Nil)</a>
+        
+          <div class="summary"><p>If this is true, the client must provide a valid certificate during the TLS handshake.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#version%3AString-instance-method" class="signature"><strong>#version</strong> : String</a>
+        
+          <div class="summary"><p>The version of NATS.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#version%3D%28version%3AString%29-instance-method" class="signature"><strong>#version=</strong>(version : String)</a>
+        
+          <div class="summary"><p>The version of NATS.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ws_connect_urls%3AArray%28String%29%7CNil-instance-method" class="signature"><strong>#ws_connect_urls</strong> : Array(String) | Nil</a>
+        
+          <div class="summary"><p>List of server urls that a websocket client can connect to.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ws_connect_urls%3D%28ws_connect_urls%3AArray%28String%29%7CNil%29-instance-method" class="signature"><strong>#ws_connect_urls=</strong>(ws_connect_urls : Array(String) | Nil)</a>
+        
+          <div class="summary"><p>List of server urls that a websocket client can connect to.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(pull:JSON::PullParser)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(pull : JSON::PullParser)
+
+        <a class="method-permalink" href="#new%28pull%3AJSON%3A%3APullParser%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="auth_required:Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>auth_required</strong> : Bool | Nil
+
+        <a class="method-permalink" href="#auth_required%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>If this is true, then the client should try to authenticate upon connect.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="auth_required=(auth_required:Bool|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>auth_required=</strong>(auth_required : Bool | Nil)
+
+        <a class="method-permalink" href="#auth_required%3D%28auth_required%3ABool%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>If this is true, then the client should try to authenticate upon connect.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="client_id:UInt64|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>client_id</strong> : UInt64 | Nil
+
+        <a class="method-permalink" href="#client_id%3AUInt64%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The internal client identifier in the server.
+This can be used to filter client connections in monitoring, correlate with error logs, etc...</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="client_id=(client_id:UInt64|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>client_id=</strong>(client_id : UInt64 | Nil)
+
+        <a class="method-permalink" href="#client_id%3D%28client_id%3AUInt64%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The internal client identifier in the server.
+This can be used to filter client connections in monitoring, correlate with error logs, etc...</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="client_ip:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>client_ip</strong> : String | Nil
+
+        <a class="method-permalink" href="#client_ip%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The IP of the client.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="client_ip=(client_ip:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>client_ip=</strong>(client_ip : String | Nil)
+
+        <a class="method-permalink" href="#client_ip%3D%28client_ip%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The IP of the client.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cluster:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>cluster</strong> : String | Nil
+
+        <a class="method-permalink" href="#cluster%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The name of the cluster.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cluster=(cluster:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>cluster=</strong>(cluster : String | Nil)
+
+        <a class="method-permalink" href="#cluster%3D%28cluster%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The name of the cluster.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="connect_urls:Array(String)|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>connect_urls</strong> : Array(String) | Nil
+
+        <a class="method-permalink" href="#connect_urls%3AArray%28String%29%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>List of server urls that a client can connect to.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="connect_urls=(connect_urls:Array(String)|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>connect_urls=</strong>(connect_urls : Array(String) | Nil)
+
+        <a class="method-permalink" href="#connect_urls%3D%28connect_urls%3AArray%28String%29%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>List of server urls that a client can connect to.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="domain:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>domain</strong> : String | Nil
+
+        <a class="method-permalink" href="#domain%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The configured NATS domain of the server.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="domain=(domain:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>domain=</strong>(domain : String | Nil)
+
+        <a class="method-permalink" href="#domain%3D%28domain%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The configured NATS domain of the server.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="git_commit:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>git_commit</strong> : String | Nil
+
+        <a class="method-permalink" href="#git_commit%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The git hash at which the NATS server was built.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="git_commit=(git_commit:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>git_commit=</strong>(git_commit : String | Nil)
+
+        <a class="method-permalink" href="#git_commit%3D%28git_commit%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The git hash at which the NATS server was built.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="go:String-instance-method">
+      <div class="signature">
+        
+        def <strong>go</strong> : String
+
+        <a class="method-permalink" href="#go%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The version of golang the NATS server was built with.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="go=(go:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>go=</strong>(go : String)
+
+        <a class="method-permalink" href="#go%3D%28go%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The version of golang the NATS server was built with.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="headers:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>headers</strong> : Bool
+
+        <a class="method-permalink" href="#headers%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Whether the server supports headers.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="headers=(headers:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>headers=</strong>(headers : Bool)
+
+        <a class="method-permalink" href="#headers%3D%28headers%3ABool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Whether the server supports headers.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="host:String-instance-method">
+      <div class="signature">
+        
+        def <strong>host</strong> : String
+
+        <a class="method-permalink" href="#host%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The IP address used to start the NATS server, by default this will be 0.0.0.0 and can be configured with -client_advertise host:port.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="host=(host:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>host=</strong>(host : String)
+
+        <a class="method-permalink" href="#host%3D%28host%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The IP address used to start the NATS server, by default this will be 0.0.0.0 and can be configured with -client_advertise host:port.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ip:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>ip</strong> : String | Nil
+
+        <a class="method-permalink" href="#ip%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The IP of the server.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ip=(ip:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>ip=</strong>(ip : String | Nil)
+
+        <a class="method-permalink" href="#ip%3D%28ip%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The IP of the server.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="jetstream:Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>jetstream</strong> : Bool | Nil
+
+        <a class="method-permalink" href="#jetstream%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Whether the server supports JetStream.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="jetstream=(jetstream:Bool|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>jetstream=</strong>(jetstream : Bool | Nil)
+
+        <a class="method-permalink" href="#jetstream%3D%28jetstream%3ABool%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Whether the server supports JetStream.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ldm:Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>ldm</strong> : Bool | Nil
+
+        <a class="method-permalink" href="#ldm%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>If the server supports Lame Duck Mode notifications, and the current server has transitioned to lame duck, ldm will be set to true.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ldm=(ldm:Bool|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>ldm=</strong>(ldm : Bool | Nil)
+
+        <a class="method-permalink" href="#ldm%3D%28ldm%3ABool%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>If the server supports Lame Duck Mode notifications, and the current server has transitioned to lame duck, ldm will be set to true.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_payload:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>max_payload</strong> : Int32
+
+        <a class="method-permalink" href="#max_payload%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Maximum payload size, in bytes, that the server will accept from the client.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_payload=(max_payload:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>max_payload=</strong>(max_payload : Int32)
+
+        <a class="method-permalink" href="#max_payload%3D%28max_payload%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Maximum payload size, in bytes, that the server will accept from the client.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nonce:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>nonce</strong> : String | Nil
+
+        <a class="method-permalink" href="#nonce%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The nonce for use in CONNECT.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nonce=(nonce:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>nonce=</strong>(nonce : String | Nil)
+
+        <a class="method-permalink" href="#nonce%3D%28nonce%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The nonce for use in CONNECT.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="port:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>port</strong> : Int32
+
+        <a class="method-permalink" href="#port%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The port number the NATS server is configured to listen on.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="port=(port:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>port=</strong>(port : Int32)
+
+        <a class="method-permalink" href="#port%3D%28port%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The port number the NATS server is configured to listen on.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="proto:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>proto</strong> : Int32
+
+        <a class="method-permalink" href="#proto%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>An integer indicating the protocol version of the server.
+The server version 1.2.0 sets this to <code>1</code> to indicate that it supports the &quot;Echo&quot; feature.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="proto=(proto:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>proto=</strong>(proto : Int32)
+
+        <a class="method-permalink" href="#proto%3D%28proto%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>An integer indicating the protocol version of the server.
+The server version 1.2.0 sets this to <code>1</code> to indicate that it supports the &quot;Echo&quot; feature.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="server_id:String-instance-method">
+      <div class="signature">
+        
+        def <strong>server_id</strong> : String
+
+        <a class="method-permalink" href="#server_id%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The unique identifier of the NATS server.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="server_id=(server_id:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>server_id=</strong>(server_id : String)
+
+        <a class="method-permalink" href="#server_id%3D%28server_id%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The unique identifier of the NATS server.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="server_name:String-instance-method">
+      <div class="signature">
+        
+        def <strong>server_name</strong> : String
+
+        <a class="method-permalink" href="#server_name%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The name of the NATS server.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="server_name=(server_name:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>server_name=</strong>(server_name : String)
+
+        <a class="method-permalink" href="#server_name%3D%28server_name%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The name of the NATS server.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tls_available:Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>tls_available</strong> : Bool | Nil
+
+        <a class="method-permalink" href="#tls_available%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>If this is true, the client can provide a valid certificate during the TLS handshake.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tls_available=(tls_available:Bool|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>tls_available=</strong>(tls_available : Bool | Nil)
+
+        <a class="method-permalink" href="#tls_available%3D%28tls_available%3ABool%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>If this is true, the client can provide a valid certificate during the TLS handshake.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tls_required:Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>tls_required</strong> : Bool | Nil
+
+        <a class="method-permalink" href="#tls_required%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>If this is true, then the client must perform the TLS/1.2 handshake.
+Note, this used to be ssl_required and has been updated along with the protocol from SSL to TLS.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tls_required=(tls_required:Bool|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>tls_required=</strong>(tls_required : Bool | Nil)
+
+        <a class="method-permalink" href="#tls_required%3D%28tls_required%3ABool%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>If this is true, then the client must perform the TLS/1.2 handshake.
+Note, this used to be ssl_required and has been updated along with the protocol from SSL to TLS.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tls_verify:Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>tls_verify</strong> : Bool | Nil
+
+        <a class="method-permalink" href="#tls_verify%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>If this is true, the client must provide a valid certificate during the TLS handshake.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tls_verify=(tls_verify:Bool|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>tls_verify=</strong>(tls_verify : Bool | Nil)
+
+        <a class="method-permalink" href="#tls_verify%3D%28tls_verify%3ABool%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>If this is true, the client must provide a valid certificate during the TLS handshake.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="version:String-instance-method">
+      <div class="signature">
+        
+        def <strong>version</strong> : String
+
+        <a class="method-permalink" href="#version%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The version of NATS.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="version=(version:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>version=</strong>(version : String)
+
+        <a class="method-permalink" href="#version%3D%28version%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The version of NATS.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ws_connect_urls:Array(String)|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>ws_connect_urls</strong> : Array(String) | Nil
+
+        <a class="method-permalink" href="#ws_connect_urls%3AArray%28String%29%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>List of server urls that a websocket client can connect to.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ws_connect_urls=(ws_connect_urls:Array(String)|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>ws_connect_urls=</strong>(ws_connect_urls : Array(String) | Nil)
+
+        <a class="method-permalink" href="#ws_connect_urls%3D%28ws_connect_urls%3AArray%28String%29%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>List of server urls that a websocket client can connect to.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

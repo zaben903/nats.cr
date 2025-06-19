@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.15.1">
+<meta name="crystal_docs.project_version" content="main-dev">
+<meta name="crystal_docs.project_name" content="nats">
+
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+  <meta name="repository-name" content="nats">
+  <title>NATS::Message::PUB - nats main-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          nats
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="nats/NATS" data-name="nats">
+      <a href="../../NATS.html">NATS</a>
+      
+        <ul>
+  
+  <li class=" " data-id="nats/NATS/AuthenticationError" data-name="nats::authenticationerror">
+      <a href="../../NATS/AuthenticationError.html">AuthenticationError</a>
+      
+    </li>
+  
+  <li class="parent " data-id="nats/NATS/Client" data-name="nats::client">
+      <a href="../../NATS/Client.html">Client</a>
+      
+        <ul>
+  
+  <li class=" " data-id="nats/NATS/Client/Status" data-name="nats::client::status">
+      <a href="../../NATS/Client/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/ClientClosedError" data-name="nats::clientclosederror">
+      <a href="../../NATS/ClientClosedError.html">ClientClosedError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/ERRError" data-name="nats::errerror">
+      <a href="../../NATS/ERRError.html">ERRError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Error" data-name="nats::error">
+      <a href="../../NATS/Error.html">Error</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="nats/NATS/Message" data-name="nats::message">
+      <a href="../../NATS/Message.html">Message</a>
+      
+        <ul>
+  
+  <li class=" " data-id="nats/NATS/Message/CONNECT" data-name="nats::message::connect">
+      <a href="../../NATS/Message/CONNECT.html">CONNECT</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/INFO" data-name="nats::message::info">
+      <a href="../../NATS/Message/INFO.html">INFO</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/MSG" data-name="nats::message::msg">
+      <a href="../../NATS/Message/MSG.html">MSG</a>
+      
+    </li>
+  
+  <li class=" current" data-id="nats/NATS/Message/PUB" data-name="nats::message::pub">
+      <a href="../../NATS/Message/PUB.html">PUB</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/SUB" data-name="nats::message::sub">
+      <a href="../../NATS/Message/SUB.html">SUB</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Message/UNSUB" data-name="nats::message::unsub">
+      <a href="../../NATS/Message/UNSUB.html">UNSUB</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/MSGError" data-name="nats::msgerror">
+      <a href="../../NATS/MSGError.html">MSGError</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/NUID" data-name="nats::nuid">
+      <a href="../../NATS/NUID.html">NUID</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Options" data-name="nats::options">
+      <a href="../../NATS/Options.html">Options</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/Subscription" data-name="nats::subscription">
+      <a href="../../NATS/Subscription.html">Subscription</a>
+      
+    </li>
+  
+  <li class=" " data-id="nats/NATS/TimeoutError" data-name="nats::timeouterror">
+      <a href="../../NATS/TimeoutError.html">TimeoutError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    struct
+  </span> NATS::<wbr>Message::<wbr>PUB
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../NATS/Message/PUB.html">NATS::Message::PUB</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The PUB message publishes the message payload to the given subject name, optionally supplying a reply subject.<br />
+If a reply subject is supplied, it will be delivered to eligible subscribers along with the supplied payload.</p>
+<p><span class="flag purple">NOTE</span>  that the payload itself is optional.</p>
+<p>SEE: https://docs.nats.io/reference/reference-protocols/nats-protocol#pub</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      nats/message/pub.cr
+    
+    <br/>
+  
+
+
+
+
+
+  
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28subject%3AString%2Creply_to%3AString%7CNil%3Dnil%2Cpayload%3AString%7CNil%3Dnil%2Ccallback%3AMessage%3A%3AMSG-%3ENil%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(subject : String, reply_to : String | Nil = <span class="n">nil</span>, payload : String | Nil = <span class="n">nil</span>, callback : Message::MSG -> Nil | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#callback%3AMessage%3A%3AMSG-%3ENil%7CNil-instance-method" class="signature"><strong>#callback</strong> : Message::MSG -> Nil | Nil</a>
+        
+          <div class="summary"><p>The callback to be invoked when a message is received.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#callback%3D%28callback%3AMessage%3A%3AMSG-%3ENil%7CNil%29-instance-method" class="signature"><strong>#callback=</strong>(callback : Message::MSG -> Nil | Nil)</a>
+        
+          <div class="summary"><p>The callback to be invoked when a message is received.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#payload%3AString%7CNil-instance-method" class="signature"><strong>#payload</strong> : String | Nil</a>
+        
+          <div class="summary"><p>The message payload data.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#payload%3D%28payload%3AString%7CNil%29-instance-method" class="signature"><strong>#payload=</strong>(payload : String | Nil)</a>
+        
+          <div class="summary"><p>The message payload data.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reply_to%3AString%7CNil-instance-method" class="signature"><strong>#reply_to</strong> : String | Nil</a>
+        
+          <div class="summary"><p>The reply subject that subscribers can use to send a response back to the publisher/requestor.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reply_to%3D%28reply_to%3AString%7CNil%29-instance-method" class="signature"><strong>#reply_to=</strong>(reply_to : String | Nil)</a>
+        
+          <div class="summary"><p>The reply subject that subscribers can use to send a response back to the publisher/requestor.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subject%3AString-instance-method" class="signature"><strong>#subject</strong> : String</a>
+        
+          <div class="summary"><p>The destination subject to publish to.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subject%3D%28subject%3AString%29-instance-method" class="signature"><strong>#subject=</strong>(subject : String)</a>
+        
+          <div class="summary"><p>The destination subject to publish to.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s-instance-method" class="signature"><strong>#to_s</strong></a>
+        
+          <div class="summary"><p>Returns a nicely readable and concise string representation of this object, typically intended for users.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(subject:String,reply_to:String|Nil=nil,payload:String|Nil=nil,callback:Message::MSG-&gt;Nil|Nil=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(subject : String, reply_to : String | Nil = <span class="n">nil</span>, payload : String | Nil = <span class="n">nil</span>, callback : <a href="../../NATS/Message/MSG.html">Message::MSG</a> -> Nil | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28subject%3AString%2Creply_to%3AString%7CNil%3Dnil%2Cpayload%3AString%7CNil%3Dnil%2Ccallback%3AMessage%3A%3AMSG-%3ENil%7CNil%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="callback:Message::MSG-&gt;Nil|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>callback</strong> : <a href="../../NATS/Message/MSG.html">Message::MSG</a> -> Nil | Nil
+
+        <a class="method-permalink" href="#callback%3AMessage%3A%3AMSG-%3ENil%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The callback to be invoked when a message is received.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="callback=(callback:Message::MSG-&gt;Nil|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>callback=</strong>(callback : <a href="../../NATS/Message/MSG.html">Message::MSG</a> -> Nil | Nil)
+
+        <a class="method-permalink" href="#callback%3D%28callback%3AMessage%3A%3AMSG-%3ENil%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The callback to be invoked when a message is received.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="payload:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>payload</strong> : String | Nil
+
+        <a class="method-permalink" href="#payload%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The message payload data.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="payload=(payload:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>payload=</strong>(payload : String | Nil)
+
+        <a class="method-permalink" href="#payload%3D%28payload%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The message payload data.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reply_to:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>reply_to</strong> : String | Nil
+
+        <a class="method-permalink" href="#reply_to%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The reply subject that subscribers can use to send a response back to the publisher/requestor.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reply_to=(reply_to:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>reply_to=</strong>(reply_to : String | Nil)
+
+        <a class="method-permalink" href="#reply_to%3D%28reply_to%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The reply subject that subscribers can use to send a response back to the publisher/requestor.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="subject:String-instance-method">
+      <div class="signature">
+        
+        def <strong>subject</strong> : String
+
+        <a class="method-permalink" href="#subject%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The destination subject to publish to.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="subject=(subject:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>subject=</strong>(subject : String)
+
+        <a class="method-permalink" href="#subject%3D%28subject%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The destination subject to publish to.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>
+
+        <a class="method-permalink" href="#to_s-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Object
+            </div>
+          
+          <p>Returns a nicely readable and concise string representation of this object,
+typically intended for users.</p>
+<p>This method should usually <strong>not</strong> be overridden. It delegates to
+<code>#to_s(IO)</code> which can be overridden for custom implementations.</p>
+<p>Also see <code>#inspect</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

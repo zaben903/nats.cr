@@ -1,20 +1,14 @@
 name: nats
-version: 0.0.4
+version: 0.0.5
+crystal: ">= 1.0, < 2.0"
+license: Apache-2.0
 
 authors:
   - Derek Collison <derek@nats.io>
+  - Zach Bensley <spam+natscr@bensley.id.au>
+
+description: |
+  Simple NATS client for the [Crystal](https://crystal-lang.org) programming language.
 
 github: nats-io/nats.cr
-
-targets:
-  nats-pub:
-    main: bin/nats-pub.cr
-  nats-sub:
-    main: bin/nats-sub.cr
-  nats-req:
-    main: bin/nats-req.cr
-
 repository: "https://github.com/nats-io/nats.cr"
-crystal: ">= 1.30, < 2.0"
-
-license: Apache-2.0

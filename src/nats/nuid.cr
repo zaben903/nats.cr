@@ -1,4 +1,4 @@
-# Copyright 2019-2020 The NATS Authors
+# Copyright 2019-2025 The NATS Authors
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -14,10 +14,10 @@
 
 require "random/secure"
 
-# Copied and modified from nats-pure repo.
-# https://github.com/nats-io/nats-pure.rb/blob/master/lib/nats/nuid.rb
-
 module NATS
+  # Copied and modified from nats-pure repo.
+  #
+  # SEE: https://github.com/nats-io/nats-pure.rb/blob/master/lib/nats/nuid.rb
   class NUID
     DIGITS        = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     BASE          = 62

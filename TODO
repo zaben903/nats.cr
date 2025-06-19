@@ -1,8 +1,5 @@
-1. auto-unsub, max messages
-2. Multiple URLs/Servers
-3. Reconnect logic
-4. Async INFO processing
-5. Multiple servers, state logic CONNECTED/RECONNECTING/DISCONNECTED/CLOSED
-6. msgs/bytes stats for connections and subscriptions
-7. async request?
-8. NATS 2.0 security/auth
+1. Reconnect logic
+2. Handle multiple servers
+3. State change callbacks
+4. auto-unsub, max messages (https://docs.nats.io/using-nats/developer/receiving/unsub_after)
+5. msgs/bytes stats for connections and subscriptions

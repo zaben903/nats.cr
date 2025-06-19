@@ -20,21 +20,29 @@ Simple NATS client for the [Crystal](https://crystal-lang.org) programming langu
 ## Usage
 
 ```crystal
-require "nats"
+require "nats/client"
 
-nc = NATS::Connection.new("demo.nats.io")
-nc.subscribe("foo") { |msg| puts "Received '#{msg}'"}
-nc.publish("foo", "Hello!")
+client = NATS::Client.new("nats://localhost:4222")
+client.connect
 
-sub = nc.subscribe("req") do |msg|
-  msg.respond("ANSWER is 42")
+client.subscribe("foo") do |msg|
+  puts "Received message on subject #{msg.subject}: #{msg.payload}"
 end
 
-answer = nc.request("req", "Help!")
-puts "Received a response '#{answer}'!"
+client.publish("foo", "Hello, NATS!")
 
-sub.close
-nc.close
+client.subscribe("bar") do |msg|
+  msg.reply "Received your message on bar: #{msg.payload}"
+end
+
+response = client.request("bar", "Hello, bar!")
+puts "Received response: #{response.payload}"
+
+client.request("bar") do |msg|
+  puts "Recieved async response: #{msg.payload}"
+end
+
+client.close
 ```
 
 ## License
